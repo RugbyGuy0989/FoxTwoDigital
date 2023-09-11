@@ -1,0 +1,491 @@
+/* PAGE-SPECIFIC STYLES FOR THE REVIEWS PAGE */
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-284 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1104px on tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (434/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+	    	font-weight: 700;
+	        text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width .3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-right-section {
+            margin: 0;
+            padding: 0;
+            max-width: (562/16rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &:nth-of-type(1) {
+                .cs-item-text {
+                    &:before {
+                        height: 50%;
+                        top: auto;
+                        bottom: -1px;
+                    }
+                }
+            }
+
+            &:nth-of-type(2), &:nth-of-type(4) {
+                justify-content: flex-end;
+                text-align: right;
+                .cs-number {
+                    /* Send number to the right */
+                    order: 2;
+                    margin: 0;
+                    /* 15px - 24px */
+                    margin-left: clamp(.9375rem, 3vw, 1.5rem);
+                }
+
+                .cs-item-text {
+                    /* reverse padding */
+                    padding-left: 0;
+                    /* 15px - 24px */
+                    padding-right: clamp(.9375rem, 3vw, 1.5rem);
+
+                    /* reset the border on the :before */
+                    &:before {
+                        border-top: 1px solid var(--primary);
+                        border-left: none;
+                        border-right: 1px solid var(--primary);
+                        left: auto;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 0 (8/16rem) (8/16rem) 0;
+                    }
+
+                    &:after {
+                        /* move dot to the right now */
+                        left: auto;
+                        right: (-15/16rem);
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                .cs-item-text {
+                    &:before {
+                        height: auto;
+                        border-top: 1px solid var(--primary);
+                        border-radius: (8/16rem) 0 0 (8/16rem);
+                        top: 1px;
+                        bottom: 0px;
+                    }
+                }
+            }
+
+            &:nth-of-type(4) {
+                .cs-item-text {
+                    &:before {
+                        height: 50%;
+                        border-radius: 0 (8/16rem) 0 0;
+                        border-bottom: none;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+
+        .cs-number {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 700;
+            /* 15px - 24px */
+            margin-right: clamp(.9375rem, 3vw, 1.5rem);
+            /* 40px - 52px */
+            width: clamp(2.5rem, 5.1vw, 3.25rem);
+            height: clamp(2.5rem, 5.1vw, 3.25rem);
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+            color: var(--headerColor);
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            position: relative;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(.875rem, 1.6vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            max-width: (300/16rem);
+            /* 22px - 32px */
+            padding: clamp(1.375rem, 3vw, 2rem) 0;
+            /* 15px - 24px */
+            padding-left: clamp(.9375rem, 3vw, 1.5rem);
+            position: relative;
+
+            &:before {
+                /* Green line */
+                content: '';
+                width: 70%;
+                height: 100%;
+                border-radius: 0 0 0 (8/16rem);
+                border-left: 1px solid var(--primary);
+                border-bottom: 1px solid var(--primary);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+
+            &:after {
+                /* list circle */
+                content: '';
+                width: (8/16rem);
+                height: (8/16rem);
+                background: var(--primary);
+                border-radius: 50%;
+                border: 12px solid #fff;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: (-15/16rem);
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #steps-284 {
+        .cs-container {
+            max-width: (1104/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            column-gap: (44/16rem);
+        }
+
+        .cs-content {
+            width: 50%;
+            /* reset margin to play nice with flexbox */
+            margin: 0;
+        }
+
+        .cs-right-section {
+            width: 57%;
+            /* 20px - 25px - this pulls the section up so it's flush with the top of the left section, the padding top on the .cs-item-text is creating a gap at the top of the section. Wrapped in a calc() function to turn clamp() value into a negative number */
+            margin-top: ~"calc(clamp(1.25rem, 2vw, 1.5625rem) * -1)";
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #steps-284 {
+            .cs-title, .cs-text, .cs-number {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item-text {
+                &:after {
+                    border: 12px solid var(--dark);
+                }
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-852 {
+
+        padding: var(--sectionPadding);
+        background-color: #fff;
+        /* clips the wave background from causing overflow issues when it goes off screen */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (738/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        h2 {
+            font-size: (32/16rem);
+            margin-top: (32/16rem);
+        }
+
+        h3 {
+            font-size: (24/16rem);
+            color: var(--primary);
+        }
+
+        h4, h5, h6 {
+            font-size: (20/16rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: (32/16rem);
+        }
+
+        .cs-no-margin {
+            margin: 0;
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+    
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--bodyTextColor);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--primary);
+            }
+        }
+
+        ol, ul {
+            padding-left: (24/16rem);
+            margin: 0 0 (32/16rem) 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        ul {
+            li {
+                list-style: none;
+                color: inherit;
+                position: relative;
+
+                &:before {
+                    /* custom list bullet */
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: block;
+                    top: (10/16rem);
+                    left: (-12/16rem);
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cs-image-group {
+            width: 50%;
+            max-width: (433/16rem);
+            display: none;
+            flex-direction: column;
+            gap: (20/16rem);
+            position: relative;
+
+            &:after {
+                /* colored box */
+                content: '';
+                width: 100%;
+                /* 177px - 258px */
+                height: clamp(11.0625rem, 19vw, 16.125rem);
+                background: var(--primary);
+                border-radius: (100/16rem) 0 (100/16rem) ;
+                opacity: .23;
+                display: block;
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 300px - 520px */
+            height: clamp(18.75rem, 40vw, 32.5rem);
+            box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+            /* 125px - 200px */
+            border-radius: 0 clamp(7.8125rem, 15vw, 12.5rem) 0 clamp(7.8125rem, 15vw, 12.5rem);
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-852 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            flex: none;
+            width: 60%;
+            /* sens it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-image-group {
+            display: flex;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #content-page-852 {
+            background-color: var(--dark);
+            
+            .cs-title, .cs-text, h2, h3, h4, h5, h6, li, p {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-color, a {
+                color: var(--primaryLight);
+            }
+
+            p, li {
+                color: #ebebeb;
+            }
+
+            .cs-picture {
+                border-color: var(--dark);
+                background-color: var(--dark);
+            }
+        }
+    }
+}
+                                

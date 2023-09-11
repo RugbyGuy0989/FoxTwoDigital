@@ -1,0 +1,122 @@
+---
+title: 'Design'
+description: 'Mobile First Web Design'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'design/'
+eleventyNavigation:
+    key: Design
+    order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/design.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+   
+    <section id="int-hero">
+        <h1 id="home-h">Web Design</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/wake.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/wake.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/wake.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+
+    </section>
+
+    <!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-284">
+    <div class="cs-container">
+        <!-- Left Section -->
+        <div class="cs-content">
+            <span class="cs-topper">Small Business Website Solutions</span>
+            <h2 class="cs-title">We Build Mobile First for Maximum Performance</h2>
+            <p class="cs-text">
+                At Fox Two Digital, we specialize in crafting exceptional websites tailored to the unique needs of small businesses across the United States. Our commitment to quality shines through every line of code we handcraft, ensuring optimal performance that drives more customers to your site and boosts your revenue.
+            </p>
+        </div>
+        <!-- Right Section -->
+        <ul class="cs-right-section">
+            <li class="cs-item">
+                <span class="cs-number">01</span>
+                <p class="cs-item-text">
+                    <strong>60% of all internet traffic</strong>  originates from mobile devices so we prioritize optimizing your website's mobile performance for superior visibility and ranking on search engines.
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">02</span>
+                <p class="cs-item-text">
+                    <strong>Our websites are designed to excel.</strong> They are fast, secure, search engine-friendly, and fully mobile-responsive
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">03</span>
+                <p class="cs-item-text">
+                    <strong>Endless Design options</strong> we will create a layout and design to funnel your vistors to becoming leads 
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">04</span>
+                <p class="cs-item-text">
+                    <strong>Once your website is</strong> fully developed, we'll deploy it to the best hosting account for your needs.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-852">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Mobile First Web Design - <span class="cs-color">Built for Performance</span></h1>
+            <h2>Google Favors Mobile Performance</h2>
+            <p>
+                Experience web design that prioritizes mobile devices. Our process begins with mobile compatibility, followed by adaptations for tablets and desktops, guaranteeing a seamless user experience on all platforms.
+            </p>
+            <p>
+                By building the website with a mobile first mindset, we ensure the highest performance and page speed scores (by ensuring we are inline with Googles 'Core Vitals'), which help us to rank higher in Google's search algorithm. If you are curious about your current website, <a href="https://pagespeed.web.dev/">try it here</a>. A website made by me will routinely score in the 95+ for speed, and often be 99 or 100%!!
+            </p>
+            <p>
+               Recent studies found that of all the people surveyed, half said they’d be willing to give up animation and video for faster load times. Furhtermore, the highest conversion rates occur on pages with load times between 0-2 seconds. So, speed matters, sometimes even more than cute animations and a flashy video.
+            </p>
+            <p>
+                By compressing images, combined with intelligent use of script and lazy loading techniques, our websites will be optimized to load on a 4G network mobile device, which makes Google happy and gets you infront of more customers.  
+            </P>
+            <h3>What Makes Our Website Faster Than Others</h3>
+            <ul>
+                <li>Intelligent image hosting, cropping and formatting. Focusing on page loading speed.</li>
+                <li>Not having bloated, extra code that creeps into wordpress or other template style web designs.</li>
+                <li>Ensuring the pages are ensitrely responsive. Not just formatted for a desk top and iphone, but any screen size in between.</li>
+            </ul>
+           
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/jet-m.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/jet.jpg">
+                <img decoding="async" src="/assets/images/jet.jpg" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                              
+
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

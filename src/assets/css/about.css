@@ -1,0 +1,518 @@
+/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-580 .cs-container,
+  #RPsbsr-580 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
+  }
+  #RPsbs-580 .cs-content,
+  #RPsbsr-580 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RPsbs-580 .cs-text,
+  #RPsbsr-580 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #RPsbs-580 .cs-text:last-of-type,
+  #RPsbsr-580 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RPsbs-580 .cs-button-solid,
+  #RPsbsr-580 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #RPsbs-580 .cs-button-solid:before,
+  #RPsbsr-580 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  #RPsbs-580 .cs-button-solid:hover:before,
+  #RPsbsr-580 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RPsbs-580 .cs-picture,
+  #RPsbsr-580 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 18.75rem;
+  }
+  #RPsbs-580 .cs-picture img,
+  #RPsbsr-580 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RPsbs-580,
+  #RPsbsr-580 {
+    padding: var(--sectionPadding);
+  }
+  #RPsbs-580 .cs-container,
+  #RPsbsr-580 .cs-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    /* 60px - 128px */
+    gap: clamp(3.75rem, 10vw, 8rem);
+  }
+  #RPsbs-580 .cs-content,
+  #RPsbsr-580 .cs-content {
+    width: 53%;
+    /* reset the padding, add the section padding back to the section container */
+    padding: 0;
+  }
+  #RPsbs-580 .cs-picture,
+  #RPsbsr-580 .cs-picture {
+    width: 47vw;
+    max-width: 30.875rem;
+    /* 518px - 700px */
+    height: clamp(32.375rem, 63vw, 43.75rem);
+    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+    margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem);
+    position: relative;
+  }
+  #RPsbs-580 .cs-picture:before,
+  #RPsbsr-580 .cs-picture:before {
+    /* yellow box */
+    content: '';
+    width: 50%;
+    height: 60%;
+    background: var(--secondary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+    left: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #RPsbs-580 .cs-topper,
+  body.dark-mode #RPsbsr-580 .cs-topper {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #RPsbs-580 .cs-title,
+  body.dark-mode #RPsbsr-580 .cs-title,
+  body.dark-mode #RPsbs-580 .cs-text,
+  body.dark-mode #RPsbsr-580 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #RPsbs-580 .cs-text,
+  body.dark-mode #RPsbsr-580 .cs-text {
+    opacity: .8;
+  }
+  body.dark-mode #RPsbs-580 .cs-picture:before,
+  body.dark-mode #RPsbsr-580 .cs-picture:before {
+    background-color: var(--accent);
+  }
+}
+/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-580 {
+    background-color: #f7f7f7;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RPsbsr-580 .cs-container {
+    justify-content: flex-end;
+  }
+  #RPsbsr-580 .cs-content {
+    /* sends it to the left in the first position */
+    order: -1;
+  }
+  #RPsbsr-580 .cs-picture {
+    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+    margin: 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem) 0;
+  }
+  #RPsbsr-580 .cs-picture:before {
+    /* yellow box */
+    content: '';
+    width: 50%;
+    height: 60%;
+    background: var(--secondary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    left: auto;
+    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+    right: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #RPsbsr-580 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-316 {
+    padding: var(--sectionPadding);
+    background-color: var(--secondary);
+  }
+  #stats-316 .cs-card-group {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5em;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  #stats-316 .cs-item {
+    list-style: none;
+    width: 14.6875rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #stats-316 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #stats-316 .cs-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  #stats-316 .cs-flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #stats-316 .cs-number {
+    font-size: var(--headerFontSize);
+    color: var(--bodyTextColorWhite);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    display: block;
+  }
+  #stats-316 .cs-desc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: #858585;
+    display: block;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #stats-316 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-316 .cs-card-group {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #Aboutsbs-328 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+  }
+  #Aboutsbs-328 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #Aboutsbs-328 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #Aboutsbs-328 .cs-topper {
+    color: var(--primary);
+  }
+  #Aboutsbs-328 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #Aboutsbs-328 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #Aboutsbs-328 .cs-circles {
+    width: 100%;
+    /* changes at desktop */
+    max-width: 23.375rem;
+    margin: auto;
+    /* 40px - 48px */
+    margin-top: clamp(2.5rem, 3vw, 3rem);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  #Aboutsbs-328 .cs-circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    aspect-ratio: 1;
+  }
+  #Aboutsbs-328 .cs-ring-wrapper {
+    position: relative;
+    margin: 0 0 0.5rem 0;
+  }
+  #Aboutsbs-328 .cs-number {
+    /* 20px - 39px */
+    font-size: clamp(1.25rem, 3vw, 2.4375rem);
+    font-weight: 900;
+    /* prevents mouse from interacting with it */
+    pointer-events: none;
+    line-height: 1.2em;
+    color: var(--headerColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #Aboutsbs-328 .cs-desc {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.4vw, 1rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    color: var(--bodyTextColor);
+  }
+  #Aboutsbs-328 .cs-ring {
+    --ring-width: 8px;
+    width: calc(100% - var(--ring-width));
+    aspect-ratio: 1;
+    overflow: visible;
+    pointer-events: none;
+    rotate: -90deg;
+    scale: 1 -1;
+  }
+  #Aboutsbs-328 .cs-ring circle {
+    fill: none;
+    stroke: #F7F7F7;
+    stroke-width: var(--ring-width);
+  }
+  #Aboutsbs-328 .cs-ring circle:last-of-type {
+    stroke: var(--primary);
+    stroke-linecap: round;
+    stroke-dasharray: calc(var(--ratio) * 314%) 314%;
+    transition: stroke-dasharray 1s;
+  }
+  #Aboutsbs-328 .cs-circle:hover .cs-ring {
+    --ratio: 0 !important;
+  }
+  #Aboutsbs-328 .cs-picture {
+    /* set font size to scale with view width, stopping at 68% the value of em */
+    font-size: min(2.16vw, .68em);
+    width: 32.5em;
+    height: 42.5em;
+    /* margin top and bottom to match the exact amount the grey square overflows the parent for consistent spacing */
+    margin: 3em 0;
+    position: relative;
+    display: block;
+  }
+  #Aboutsbs-328 .cs-picture:before {
+    /* grey box */
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    background: var(--secondary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: rotate(15deg);
+  }
+  #Aboutsbs-328 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.625rem;
+    object-fit: cover;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #Aboutsbs-328 .cs-container {
+    max-width: 80rem;
+    /* set to horizontal arrangement */
+    flex-direction: row;
+    justify-content: center;
+    /* 77px - 160px */
+    gap: clamp(4.8125rem, 11vw, 10rem);
+  }
+  #Aboutsbs-328 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  #Aboutsbs-328 .cs-picture {
+    font-size: min(1.1vw, 1em);
+    margin: 3.5em 0 3.5em 5em;
+    /* prevent flexbox from squishing it */
+    flex: none;
+  }
+  #Aboutsbs-328 .cs-circles {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #Aboutsbs-328 .cs-ring-wrapper {
+    /* breaks the children out of the container.  They can now be arrnaged as if thy are all children of the cs-circle */
+    display: contents;
+  }
+  #Aboutsbs-328 .cs-ring {
+    /* make the ring position absolute so it can sit on top of the other elements that are centered relatively in the cs-circle */
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #Aboutsbs-328 .cs-number {
+    /* make the number relative positioning so it and the cs-desc can position themselves around each other */
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  #Aboutsbs-328 .cs-desc {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #Aboutsbs-328 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #Aboutsbs-328 .cs-picture:before,
+  body.dark-mode #Aboutsbs-328 .cs-picture:after {
+    background: var(--accent);
+  }
+  body.dark-mode #Aboutsbs-328 .cs-topper {
+    color: var(--secondaryLight);
+  }
+  body.dark-mode #Aboutsbs-328 .cs-title,
+  body.dark-mode #Aboutsbs-328 .cs-text,
+  body.dark-mode #Aboutsbs-328 .cs-call,
+  body.dark-mode #Aboutsbs-328 .cs-number,
+  body.dark-mode #Aboutsbs-328 .cs-desc {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #Aboutsbs-328 .cs-text {
+    opacity: .8;
+  }
+  body.dark-mode #Aboutsbs-328 .cs-button-solid {
+    background-color: var(--secondaryLight);
+    color: #1a1a1a;
+  }
+  body.dark-mode #Aboutsbs-328 .cs-button-solid:before {
+    background-color: #fff;
+  }
+  body.dark-mode #Aboutsbs-328 .cs-ring circle {
+    stroke: var(--accent);
+  }
+  body.dark-mode #Aboutsbs-328 .cs-ring circle:last-of-type {
+    stroke: var(--secondaryLight);
+  }
+}
