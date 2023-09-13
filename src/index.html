@@ -31,6 +31,15 @@ eleventyNavigation:
                 });
         }
     </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8F03QRBFP"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N8F03QRBFP');
+        </script>
 {% endblock %}
 
 {% block body %}
@@ -245,7 +254,7 @@ eleventyNavigation:
                     height="16" />
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+            <a aria-label="our reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
         </div>
     </section>
 
