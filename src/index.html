@@ -31,15 +31,6 @@ eleventyNavigation:
                 });
         }
     </script>
-    <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8F03QRBFP"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-N8F03QRBFP');
-        </script>
 {% endblock %}
 
 {% block body %}
@@ -258,4 +249,7 @@ eleventyNavigation:
     </section>
 
     {% include 'components/cta.html' %}
+
+    <script defer src="/nav.js"></script>
+    
 {% endblock %}
