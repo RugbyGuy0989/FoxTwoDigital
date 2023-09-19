@@ -1,9 +1,9 @@
 ---
-title: '"Skyrocket Your Success: Unleash Small Business Marketing Strategies
-  That Work!"'
-description: '"Discover the most effective small business marketing strategies
-  in this comprehensive guide. Unlock explosive growth and take your business to
-  new heights today!"'
+title: "Skyrocket Your Success: Unleash Small Business Marketing Strategies That
+  Work!"
+description: Discover the most effective small business marketing strategies in
+  this comprehensive guide. Unlock explosive growth and take your business to
+  new heights today!
 author: "Thomas "
 date: 2023-09-17T02:07:37.314Z
 tags:
