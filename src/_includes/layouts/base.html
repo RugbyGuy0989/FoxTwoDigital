@@ -1,4 +1,4 @@
-<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,13 +46,6 @@
 
     {% block head %}{% endblock %}
 
-    <!--For home page, use service keywords for the title, including location for SEO.
-        Other pages should just include the page name.
-        
-        EXAMPLE:
-        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
-        About Page - About us | Painters and Co.
-        -->
     <title>
       {% if page.url == '/'%}
         {{ title }}
@@ -67,6 +60,15 @@
         {{ client.name }}
       {% endif %}
     </title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8F03QRBFP"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N8F03QRBFP');
+        </script>
   </head>
   <body>
     <!--Screen reader skip main nav-->
