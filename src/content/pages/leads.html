@@ -1,0 +1,34 @@
+---
+title: 'Lead Generation'
+description: 'Description for <meta> and OG tags'
+preloadImg: '/assets/images/wake.webp'
+permalink: '/leads'
+eleventyNavigation:
+    key: Leads
+    order: 6000
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/leads.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+
+    <section id="int-hero">
+        <h1 id="home-h">Lead Generation</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/wake.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/wake.webp">
+            <img aria-hidden="true" decoding="async" src="/assets/images/wake.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+
+    </section>
+
+{% endblock %}
