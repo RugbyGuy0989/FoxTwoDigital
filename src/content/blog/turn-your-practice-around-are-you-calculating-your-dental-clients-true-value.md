@@ -1,6 +1,6 @@
 ---
-title: "Turn Your Practice Around: Are You Calculating Your Dental Client's True
-  Value?"
+title: Turn Your Practice Around - Are You Calculating Your Dental Client's True
+  Value?
 description: "Unlocking Dental Practice Success: Understanding and Amplifying
   the Lifetime Value of Dental Patients. Dive into the significance of Customer
   Lifetime Value in dentistry, and discover strategies to elevate patient
