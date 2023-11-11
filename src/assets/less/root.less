@@ -11,8 +11,8 @@
 		--primary: #ff8200;
 		--primaryLight: #b6e1e2;
 		--secondary: #58595b;
-		--secondaryLight: #58595b;
-		--headerColor: #4b4b4b;
+		--secondaryLight: #797ef6;
+		--headerColor: #1a1a1a;
 		--bodyTextColor: #4e4b66;
 		--bodyTextColorWhite: #fafbfc;
 
@@ -1168,121 +1168,248 @@ body, html {
 }
 
 /*-- -------------------------- -->
-<---           Footer           -->
+<---          Footer            -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cs-footer-106 {
-        padding: (40/16rem) (16/16rem) (20/16rem);
-        background: #58595b;
+    #cs-footer-1293 {
+        padding: var(--sectionPadding);
+        padding-bottom: (20/16rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        position: relative;
+        z-index: 10;
 
         .cs-container {
             width: 100%;
-            max-width: (1080/16rem);
             margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            column-gap: (24/16rem);
+            row-gap: (36/16rem);
         }
 
-        .cs-ul {
-            padding: 0 0 (40/16rem);
-            margin: auto;
-            border-bottom: 1px solid #EFF0F6;
+        .cs-logo-group {
+            /* takes up all the space, lets the other ul's wrap below it */
+            width: 100%;
+            position: relative;
         }
 
-        .cs-li {
-            list-style: none;
-            text-align: center;
-            margin-bottom: (20/16rem);
-            &:last-of-type {
-                margin-bottom: 0;
+        .cs-logo {
+            width: (197/16rem);
+            height: auto;
+            display: block;
+            /* 20px - 24px */
+            margin: 0 0 clamp(1.25rem, 2vw, 1.5rem) 0;
+        }
+
+        .cs-logo-img {
+            width: 100%;
+            height: auto;
+
+            &.dark {
+                display: none;
             }
         }
-
         .cs-link {
-            /* 15px - 17px */
-            font-size: clamp(.9375rem, 2vw, 1.0625rem);
+            font-size: (14/16rem);
             line-height: 1.5em;
             text-decoration: none;
-            font-weight: 700 ;
+            margin: 0;
             color: var(--bodyTextColorWhite);
-            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (12/16rem);
+            transition: color 0.3s;
 
             &:hover {
-                &:before {
-                    width: 100%;
-                }
+                color: var(--primary);
             }
+        }
+
+        /* Navigation Links */
+
+        .cs-nav {
+            width: 45%;
+            max-width: (180/16rem);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        .cs-nav-li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .cs-header {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin-bottom: (8/16rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: block;
+        }
+
+        .cs-nav-link {
+            font-size: (14/16rem);
+            text-decoration: none;
+            line-height: 1.5em;
+            width: auto;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s;
 
             &:before {
-                /* top right box */
-                content: '';
+                /* underline */
+                content: "";
                 width: 0%;
-                height: (3/16rem);
-                background: var(--primary);
+                height: (2/16rem);
+                background: currentColor;
                 opacity: 1;
                 position: absolute;
                 display: block;
                 bottom: (-2/16rem);
                 left: 0;
-                transition: width .3s;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: var(--primary);
+                &:before {
+                    width: 100%;
+                }
             }
         }
 
         .cs-bottom {
-            margin-top: (20/16rem);
-            display: flex;
-            /* set everyone to position on the left side */
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .cs-copyright {
-            font-size: (15/16rem);
-            text-align: center;
-            color: #ff8200;
-            display: block;
-            /* margin right auto on a flexbox pushes everyone else to the right */
-            margin: 0 auto 0 0;
-        }
-
-        .cs-social-link {
-            width: (20/16rem);
-            height: (20/16rem);
-            margin-left: (12/16rem);
-            background: #ff8200;
-            border-radius: 50%;
+            max-width: (1280/16rem);
+            margin: auto;
+            /* 48px - 100px */
+            margin-top: clamp(3rem, 9vw, 6.25rem);
+            /* 20px - 32px */
+            padding: clamp(1.25rem, 3vw, 2rem) 0 0 0;
+            box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            column-gap: (36/16rem);
+            row-gap: (12/16rem);
+        }
 
-            img {
-                height: (11/16rem);
-                width: auto;
+        .cs-copyright {
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+
+            .cs-copyright-link {
+                opacity: 1;
             }
         }
+
+        .cs-copyright-link {
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+        }
+
+        .cs-copyright {
+            text-align: center;
+            width: 100%;
+        }
+
+        .cs-copyright-link {
+            text-decoration: none;
+            transition: color 0.3s;
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+
     }
 }
 
-/* Tablet - 700px */
-@media only screen and (min-width: 43.75rem) {
-    #cs-footer-106 {
-        .cs-ul {
-            display: flex;
-            /* push everything to the left */
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cs-footer-1293 {
+        .cs-container {
+            row-gap: 0;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: (88/16rem);
+            row-gap: (40/16rem);
+        }
+
+        .cs-nav {
+            width: auto;
+        }
+
+        .cs-bottom {
+            flex-wrap: nowrap;
             justify-content: flex-start;
-            align-items: center;
         }
 
-        .cs-li {
-            /* 45px - 88px */
-            margin: 0 clamp(2.8125rem, 7vw, 5.5rem) 0 0;
-            &:last-of-type {
-                margin: 0;
-                /* margin-left auto will push everything away and force it to the farthest 
-                   right edge */
-                margin-left: auto;
-            }
+        .cs-copyright {
+            text-align: left;
+            width: auto;
+            margin-right: auto;
+        }
+
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-footer-1293 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-wrap: nowrap;
+            /* align everything to the right */
+            justify-content: flex-end;
+            column-gap: clamp(2.5rem, 6vw, 5.25rem);
+        }
+
+        .cs-logo-group {
+            width: 30%;
+            max-width: (387/16rem);
+            /* pushes away from everything to the right */
+            margin-right: auto;
+        }
+
+        .cs-text {
+            width: 100%;
+        }
+
+        .cs-graphic {
+            display: block;
         }
     }
 }
-                                
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cs-footer-1293 {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+                                                          
