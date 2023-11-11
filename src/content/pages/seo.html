@@ -1,0 +1,98 @@
+---
+title: 'Local SEO'
+description: 'Description for <meta> and OG tags'
+preloadImg: '/assets/images/wake.webp'
+permalink: '/seo'
+eleventyNavigation:
+    key: Local SEO
+    order: 1000
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/seo.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+
+    <section id="int-hero">
+        <h1 id="home-h">Local SEO</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/wake.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/wake.webp">
+            <img aria-hidden="true" decoding="async" src="/assets/images/wake.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+
+    </section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-77">
+    <div class="cs-container">
+        <div class="cs-wrapper">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg" alt="body builder" width="500" height="552" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Google Business Profile Management</span>
+            <h2 class="cs-title">Fox Two Digital Local SEO</h2>
+            <p class="cs-text">
+                We will take full control and management of your Google Buisness Profile. By activly manging your Google Business Profile, you can work to move higher up on the Google Map Pack, to you can dominate "service near me" Google searches. We will:
+            </p>
+            <ul>
+                <li>
+                    Optimize Business Categories and Description
+                </li>
+                 <li>
+                    Respond to Incoming Reviews
+                </li>
+                 <li>
+                    Post Updates and Pictures for Profile Engagement
+                </li>
+                 <li>
+                    Respond to Questions and Messages on Google Business Profile
+                </li>
+            </ul>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-77">
+    <div class="cs-container">
+        <div class="cs-wrapper">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg" alt="body builder" width="500" height="552" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Key Word Research</span>
+            <h2 class="cs-title">Fox Two Digital Traditonal SEO</h2>
+            <p class="cs-text">
+               We will research the keywords your competitorsare ranking for and help you optimize your website for the key words that matter in your industry. Creating service and location specific pages, schema mark ups, optimized Meta tags and targeting long and short tail keywords all work together to push you higher in the search results.
+            </p>
+        </div>
+    </div>
+</section>
+                                
+
+   {% include 'components/cta.html' %}                  
+
+
+{% endblock %}
