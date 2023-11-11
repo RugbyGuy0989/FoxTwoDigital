@@ -1,10 +1,10 @@
 ---
 title: Turn Your Practice Around - Are You Calculating Your Dental Client's True
   Value?
-description: "Unlocking Dental Practice Success: Understanding and Amplifying
+description: Unlocking Dental Practice Success - Understanding and Amplifying
   the Lifetime Value of Dental Patients. Dive into the significance of Customer
   Lifetime Value in dentistry, and discover strategies to elevate patient
-  relationships and profitability."
+  relationships and profitability.
 author: Thomas
 date: 2023-09-25T18:42:04.902Z
 tags:

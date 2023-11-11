@@ -1,10 +1,10 @@
 ---
-title: '"Tech-savvy Teeth: A Glimpse into the Groundbreaking Innovations in
-  Dentistry"'
-description: "\"Uncover the groundbreaking advances taking the dental world by
+title: Tech-savvy Teeth - A Glimpse into the Groundbreaking Innovations in
+  Dentistry
+description: Uncover the groundbreaking advances taking the dental world by
   storm! Dive into the most innovative technologies in modern dentistry and see
   how they're reshaping patient experiences and treatments. Don't get left
-  behind – discover the future of dental care today!\""
+  behind – discover the future of dental care today!
 author: Thomas
 date: 2023-09-21T21:37:19.758Z
 tags:
