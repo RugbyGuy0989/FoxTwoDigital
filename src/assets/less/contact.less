@@ -64,102 +64,8 @@
 
         .cs-form {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
             align-items: center;
-            gap: (12/16rem);
-        }
-
-        .cs-label {
-            /* 14px - 16px */
-            font-size: clamp(.875rem, 1.5vw, 1rem);
-            width: 100%;
-            color: var(--headerColor);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: (4/16rem);
-        }
-
-        .cs-input {
-            font-size: (16/16rem);
-            width: 100%;
-            height: (56/16rem);
-            padding: 0;
-            padding-left: (24/16rem);
-            color: var(--headerColor);
-            background-color: #fff;
-            border: 1px solid #E0E0E0;
-            /* prevents padding from adding to height and width */
-            box-sizing: border-box;
-            transition: border-color .3s;
-            &:hover {
-                border-color: var(--secondary);
-            }
-            &:focus {
-                outline: 1px solid var(--secondary);
-            }
-            &::placeholder {
-                color: #7D799C;
-                opacity: .6;
-            }
-        }
-
-        .cs-textarea {
-            /* 120px - 192px */
-            min-height: clamp(7.5rem, 28vw, 12rem);
-            padding-top: (24/16rem);
-            margin-bottom: (12/16rem);
-            font-family: inherit;
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-	    	font-weight: 700;
-	        text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width .3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .cs-submit {
-            text-transform: uppercase;
-            line-height: (56/16rem);
-            min-width: (214/16rem);
-            border: none;
-            border-radius: 0;
         }
     }
 
@@ -186,7 +92,7 @@
         }
 
         .cs-right {
-            width: 56%;
+            width: 100%;
             max-width: (630/16rem);
             padding: 0;
         }
