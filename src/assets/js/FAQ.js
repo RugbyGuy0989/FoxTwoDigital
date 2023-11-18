@@ -1,4 +1,3 @@
-
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {
             const onClick = () => {
@@ -48,3 +47,4 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         }
 
         new FAQFilter()
+                                
