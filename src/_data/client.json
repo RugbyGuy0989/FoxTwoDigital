@@ -1,8 +1,8 @@
 {
 	"name": "Fox Two Digital",
-	"email": "info@FoxTwoDigital.com",
-	"phoneForTel": "904-510-3782",
-	"phoneFormatted": "(904)-510-3782",
+	"email": "Thomas@FoxTwoDigital.com",
+	"phoneForTel": "865-338-2511",
+	"phoneFormatted": "(865)-338-2511",
 	"address": {
 		"lineOne": "",
 		"lineTwo": "",
@@ -11,5 +11,5 @@
 		"zip": "",
 		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
 	},
-	"domain": "www.FoxTwoDigital.com"
+	"domain": "https://foxtwodigital.com/"
 }
